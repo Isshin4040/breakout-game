@@ -57,7 +57,7 @@ function init() {
 
 function launch() {
   const angle = (Math.random() * 60 - 30) * Math.PI / 180;
-  const speed = 5.5;
+  const speed = 7;
   ball.vx = speed * Math.sin(angle);
   ball.vy = -speed * Math.cos(angle);
   state = "playing";
@@ -92,7 +92,7 @@ function update() {
     ball.x <= paddle.x + PADDLE_W + BALL_R
   ) {
     const hit = (ball.x - (paddle.x + PADDLE_W / 2)) / (PADDLE_W / 2); // -1..1
-    const speed = Math.min(9, Math.hypot(ball.vx, ball.vy) * 1.01);
+    const speed = Math.min(11, Math.hypot(ball.vx, ball.vy) * 1.01);
     const angle = hit * 65 * Math.PI / 180;
     ball.vx = speed * Math.sin(angle);
     ball.vy = -speed * Math.cos(angle);
