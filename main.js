@@ -57,7 +57,7 @@ function init() {
 
 function launch() {
   const angle = (Math.random() * 60 - 30) * Math.PI / 180;
-  const speed = 7;
+  const speed = 10;
   ball.vx = speed * Math.sin(angle);
   ball.vy = -speed * Math.cos(angle);
   state = "playing";
